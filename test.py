@@ -14,7 +14,7 @@ class TestDev(TestCase):
         self.assertIn("model.pkl", list_files)
         self.assertIn("requirements.txt", list_files)
         self.assertIn("data.csv", list_files)
-    
+     
 
     # Vérifie que les requirements sont présents
     def test_requirements(self):
