@@ -1,0 +1,7 @@
+venv_fastapi/
+
+.vscode/
+
+__pycache__/
+
+.benchmarks/
