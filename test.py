@@ -22,7 +22,7 @@ class TestDev(TestCase):
             requirements = f.read()
         self.assertIn("uvicorn", requirements)
         self.assertIn("fastapi", requirements)
-        self.assertIn("scikit-learn", requirements)
+        self.assertIn("scikit-learn==1.1.2", requirements)
         self.assertIn("pandas==2.0.3", requirements)
         self.assertIn("httpx", requirements)
         self.assertIn("pydantic", requirements)
