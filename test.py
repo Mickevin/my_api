@@ -20,7 +20,7 @@ class TestDev(TestCase):
     def test_requirements(self):
         with open("requirements.txt", "r") as f:
             requirements = f.read()
-        self.assertIn("uvicorn", requirements)
+        self.assertIn("uvicorV", requirements)
         self.assertIn("fastapi", requirements)
         self.assertIn("scikit-learn==1.1.2", requirements)
         self.assertIn("pandas==2.0.3", requirements)
