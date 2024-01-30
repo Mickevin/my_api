@@ -38,7 +38,7 @@ app = FastAPI(
 # Point de terminaison standard
 @app.get("/", tags=["Hello", "Root Square"], description="Hello World Test")
 def index():
-    return {"message": "Hello World"}
+    return {"message": "Hello World!!!"}
 
 
 # Point de terminaison avec paramètre

@@ -10,7 +10,7 @@ class TestDev(TestCase):
     def test_files(self):
         import os
         list_files = os.listdir()
-        self.assertIn("api.py", list_files)
+        self.assertIn("appi.py", list_files)
         self.assertIn("model.pkl", list_files)
         self.assertIn("requirements.txt", list_files)
         self.assertIn("data.csv", list_files)
