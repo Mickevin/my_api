@@ -16,5 +16,5 @@ components.html(
   src="https://api-brest-isen-8f7979410f0b.herokuapp.com/docs">
 </iframe>
     """,
-    height=1000,
+    height=2000,
 )
