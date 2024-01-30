@@ -10,7 +10,7 @@ class TestDev(TestCase):
     def test_files(self):
         import os
         list_files = os.listdir()
-        self.assertIn("app5.py", list_files)
+        self.assertIn("api.py", list_files)
         self.assertIn("model.pkl", list_files)
         self.assertIn("requirements.txt", list_files)
         self.assertIn("data.csv", list_files)
@@ -42,7 +42,7 @@ class TestApi(TestCase):
     def test_api(self):
         response = client.get("/")
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json(), {"message": "Hello World"})
+        self.assertEqual(response.json(), {"message": "Hello World!!!"})
 
     
     # Vérifie que l'API est bien lancée
