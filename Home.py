@@ -15,7 +15,7 @@ st.set_page_config(
 st.title("My streamlit App")
 
 ### Checkbox st.checkbox
-@st.cache_data
+@st.cache_data()
 def load_data():
     df = pd.read_csv("train.csv", sep=';')
     return df

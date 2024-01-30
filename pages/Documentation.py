@@ -7,6 +7,8 @@ st.set_page_config(
     layout="wide",
 )
 
+st.title("Documentation API")
+
 components.html(
 """<iframe
   width="1200"
