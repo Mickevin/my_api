@@ -1,5 +1,5 @@
 ### Import
-
+import streamlit as st
 
 # Cach data @st.cache_data
 
