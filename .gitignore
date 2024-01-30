@@ -1,5 +1,7 @@
 venv_fastapi/
 
+venv_streamlit/
+
 .vscode/
 
 __pycache__/
