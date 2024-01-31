@@ -92,13 +92,22 @@ class Credit(BaseModel):
     poutcome: int
 
 # Point de terminaison : Prédiction
-@app.post("/predict", tags=["Predict Model 1"])
+@app.post("/predict", tags=["Predict Model - Mlfow"])
 def predict(credit: Credit):
 
     #with open('model.pkl', 'rb') as f: model = pickle.load(f)
     #predict_value = int(model.predict([list(credit.dict().values())])[0])
     
     predict_value = loaded_model.predict(credit.dict())[0]
+
+    return {"pred" : predict_value}
+
+# Point de terminaison : Prédiction
+@app.post("/predict", tags=["Predict Model"])
+def predict(credit: Credit):
+
+    with open('model.pkl', 'rb') as f: model = pickle.load(f)
+    predict_value = int(model.predict([list(credit.dict().values())])[0])
 
     return {"pred" : predict_value}
 
