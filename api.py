@@ -28,6 +28,10 @@ tags  = [
     {
         "name": "Root Square",
         "description": "Root Square"
+    },
+    {
+        "name": "Predict Model - Mlfow",
+        "description": "Root Square"
     }
 ]
 
@@ -103,7 +107,7 @@ def predict(credit: Credit):
     return {"pred" : predict_value}
 
 # Point de terminaison : Prédiction
-@app.post("/predict", tags=["Predict Model"])
+@app.post("/predict-1", tags=["Predict Model - 1"])
 def predict(credit: Credit):
 
     with open('model.pkl', 'rb') as f: model = pickle.load(f)
