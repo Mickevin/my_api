@@ -104,7 +104,7 @@ def predict_mlflow(credit: Credit):
     
     predict_value = loaded_model.predict(credit.dict())[0]
 
-    return {"pred" : predict_value}
+    return {"pred" : str(predict_value)}
 
 # Point de terminaison : Prédiction
 @app.post("/predict-1", tags=["Predict Model - 1"])
@@ -113,7 +113,7 @@ def predict(credit: Credit):
     with open('model.pkl', 'rb') as f: model = pickle.load(f)
     predict_value = int(model.predict([list(credit.dict().values())])[0])
 
-    return {"pred" : predict_value}
+    return {"pred" : str(predict_value)}
 
 
 # Point de terminaison qui permet de verser un fichier
