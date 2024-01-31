@@ -11,8 +11,10 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+st.sidebar.image('img.jpg')
+
 ### Title et markdown : st.title et st.markdown
-st.title("My Credit")
+st.title("My Credit - ISEN")
 
 # Cach data @st.cache_data
 @st.cache_data
