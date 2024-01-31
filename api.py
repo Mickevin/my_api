@@ -10,7 +10,6 @@ import mlflow
 import os
 
 
-
 # Création des tags
 tags  = [
     {
@@ -95,24 +94,21 @@ class Credit(BaseModel):
     previous: int
     poutcome: int
 
+
+
 # Point de terminaison : Prédiction
 @app.post("/predict", tags=["Predict Model - Mlfow"])
 def predict_mlflow(credit: Credit):
-
-    #with open('model.pkl', 'rb') as f: model = pickle.load(f)
-    #predict_value = int(model.predict([list(credit.dict().values())])[0])
-    
     predict_value = loaded_model.predict(credit.dict())[0]
-
     return {"pred" : str(predict_value)}
 
-# Point de terminaison : Prédiction
+
+
+# Point de terminaison : Prédiction from MLFLOW
 @app.post("/predict-1", tags=["Predict Model - 1"])
 def predict(credit: Credit):
-
     with open('model.pkl', 'rb') as f: model = pickle.load(f)
     predict_value = int(model.predict([list(credit.dict().values())])[0])
-
     return {"pred" : str(predict_value)}
 
 
