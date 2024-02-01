@@ -51,8 +51,9 @@ mlflow.set_tracking_uri("https://isen-mlflow-fae8e0578f2f.herokuapp.com/")
 
 logged_model = 'runs:/201bd90bf6e747a4af86e0d0f34511af/model'
 
-# Load model as a PyFuncModel.
-loaded_model = mlflow.pyfunc.load_model(logged_model)
+try:loaded_model = mlflow.pyfunc.load_model(logged_model)
+except:loaded_model = None
+
 
 
 # Point de terminaison standard
