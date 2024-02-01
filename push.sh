@@ -1,8 +1,8 @@
 # Construction de l'image docker et push sur Heroku
-#docker buildx build --platform linux/amd64 -t streamlit_isen  .
+docker buildx build --platform linux/amd64 -t streamlit_isen  .
 
 # Construction de l'image docker et push sur Heroku
-docker build . -t streamlit_isen
+#docker build . -t streamlit_isen
 
 # Tag de l'image au registre Heroku
 docker tag streamlit_isen registry.heroku.com/streamlit-isen-kevin/web

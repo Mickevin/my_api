@@ -8,4 +8,4 @@ RUN pip install boto3 pandas streamlit
 
 COPY . /home/app		
 
-CMD streamlit run --server.port $PORT Home.py
+CMD echo $Test && streamlit run --server.port $PORT Home.py
